@@ -3,6 +3,8 @@ from tkinter import filedialog
 from PIL import Image
 import os
 
+STANDARD_SIZE = (500, 500)
+
 def squareImage(img, fillColor=(0, 0, 0, 0)):
     x, y = img.size
     size = max(x, y)
@@ -75,7 +77,7 @@ def squareOneImage():
         newImage = squareImage(image)
 
         if optmize_one and newImage.size[0] > 500:
-            newImage = newImage.resize((500,500), Image.ANTIALIAS)
+            newImage = newImage.resize(STANDARD_SIZE, Image.ANTIALIAS)
 
         newImage.save(finalName, optmize = True, quality = 100)
 
@@ -109,7 +111,7 @@ def squareFolder():
                 finalFilename = finalFilename.replace(".tiff", ".png")
 
                 if optmize_folder and newImage.size[0] > 500:
-                    newImage = newImage.resize((500,500), Image.ANTIALIAS)
+                    newImage = newImage.resize(STANDARD_SIZE, Image.ANTIALIAS)
 
                 newImage.save(finalFolder + "/" + finalFilename, optmize = True, quality = 100)
 
