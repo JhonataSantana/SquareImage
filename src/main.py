@@ -130,7 +130,7 @@ bodyPadding = 8
 standardBackground = "#F3F3F3"
 
 app.title("Square Image")
-app.iconbitmap("favicon.ico")
+# app.iconbitmap("./favicon.ico")
 app.configure(background = standardBackground, padx = bodyPadding, pady = bodyPadding)
 app.minsize(500, 0)
 app.maxsize(500, 600)
