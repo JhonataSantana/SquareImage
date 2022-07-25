@@ -1,4 +1,4 @@
-# Square Image 
+# <img src="https://user-images.githubusercontent.com/54081383/180842422-e8d0fb52-c2ac-46d5-a056-003eb3f815d2.png" width="24" /> Square Image
 
 Aplicativo de redimensionamento de imagens para facilitar e automatizar o processo de adição de imagens em páginas web.
 
