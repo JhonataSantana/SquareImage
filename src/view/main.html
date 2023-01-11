@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <main class="container pt-4 pb-4">
+        <h1>Olá Mundo!</h1>
+        <button id="oi">teste</button>
+        <div id="res"></div>
+    </main>
+
+    <script>
+        const oi = document.getElementById("oi");
+        oi.addEventListener("click", () => {
+            console.log("oi");
+            console.log(eel.oi());
+        });
+
+        function getResult(res){
+            const imgArea = document.getElementById("res");
+            if(Array.isArray(res)){
+                res.forEach(img => {
+                    let imgTag = document.createElement("img");
+                    imgTag.src = "./_temp/img.png";
+                    console.log(img);
+                    imgArea.appendChild(imgTag);
+                });
+            }
+        }
+
+        eel.expose(getResult);
+
+    </script>
+
+</body>
+
+</html>
