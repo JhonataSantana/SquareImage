@@ -3,38 +3,39 @@
 <head>
     <script src="/eel.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <main class="container pt-4 pb-4">
-        <h1>Olá Mundo!</h1>
-        <button id="oi">teste</button>
-        <div id="res"></div>
+    <!-- <div id="loader" class="flex">
+        <div class="logo">
+            <div class="frame"></div>
+            <div class="logoI"></div>
+        </div>
+    </div> -->
+    
+    <main class="container pt-4">
+        <header>
+            <div class="row flex">
+                <div class="flex brand">
+                    <img src="./assets/img/logo.png" alt="">
+                    <h1>Square Image</h1>
+                </div>
+                <span class="flex actions">
+                    <button id="selectTrigger" class="btn btn-primary">Selecionar Imagens</button>
+                    <button id="folderTrigger" class="btn btn-primary">Selecionar Pasta</button>
+                </span>
+            </div>
+        </header>
+        <section class="row mt-4 pb-4" style="overflow: auto;">
+            <div id="images" class="grid">
+            </div>
+        </section>
     </main>
 
-    <script>
-        const oi = document.getElementById("oi");
-        oi.addEventListener("click", () => {
-            console.log("oi");
-            console.log(eel.oi());
-        });
-
-        function getResult(res){
-            const imgArea = document.getElementById("res");
-            if(Array.isArray(res)){
-                res.forEach(img => {
-                    let imgTag = document.createElement("img");
-                    imgTag.src = "./_temp/img.png";
-                    console.log(img);
-                    imgArea.appendChild(imgTag);
-                });
-            }
-        }
-
-        eel.expose(getResult);
-
-    </script>
+    <script type="module" src="./js/load.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
