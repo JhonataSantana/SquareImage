@@ -27,3 +27,5 @@ Existe também a opção de otimizar as imagens deixando-as mais 'leves' e não 
 > Pode ser alterado no código fonte `'STANDARD_SIZE'`
  
 ![image](https://user-images.githubusercontent.com/54081383/180110257-cbfacfba-d071-4188-8a3f-5355bd7b503a.png)
+
+Obs.: Pode não estar funcionando corretamente, não lembro em que pé parei, estava fazendo uma melhoria na interface pra deixar de ser assim quadradão.
